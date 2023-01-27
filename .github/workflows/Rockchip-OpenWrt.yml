@@ -172,10 +172,10 @@ jobs:
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
-      token: ${{ secrets.MY_TOKEN }}
       with:
         retain_days: 1
         keep_minimum_runs: 3
+        token: ${{ secrets.MY_TOKEN }}
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.2.1
